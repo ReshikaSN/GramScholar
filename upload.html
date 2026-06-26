@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Documents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Documents</a>
+</nav>
+
+<div class="container">
+
+<h3>Upload Required Documents</h3>
+
+<div class="doc-card">
+    <label>Aadhaar Card:</label>
+    <input type="file" id="aadhaar" onchange="updateStatus('aadhaar')">
+    <span id="aadhaarStatus">❌ Not Uploaded</span>
+</div>
+
+<div class="doc-card">
+    <label>Income Certificate:</label>
+    <input type="file" id="income" onchange="updateStatus('income')">
+    <span id="incomeStatus">❌ Not Uploaded</span>
+</div>
+
+<div class="doc-card">
+    <label>Marksheet:</label>
+    <input type="file" id="marksheet" onchange="updateStatus('marksheet')">
+    <span id="marksheetStatus">❌ Not Uploaded</span>
+</div>
+
+<div class="doc-card">
+    <label>Bank Passbook:</label>
+    <input type="file" id="bank" onchange="updateStatus('bank')">
+    <span id="bankStatus">❌ Not Uploaded</span>
+</div>
+
+<button onclick="checkAllDocuments()">Submit Documents</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

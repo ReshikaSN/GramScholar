@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GramScholar - Rural Scholarship Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="logo-container">
+    <img src="logo.jpeg" alt="GramScholar Logo" class="logo">
+    <h1>GramScholar</h1>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Documents</a>
+</nav>
+
+<div class="container">
+    <h2>Welcome to Scholarship Portal</h2>
+
+</div>
+
+
+
+<div class="container">
+
+    <label>Select Language:</label>
+    <select id="language">
+        <option value="en-IN">English</option>
+        <option value="ta-IN">Tamil</option>
+        <option value="hi-IN">Hindi</option>
+    </select>
+    <p id="status"></p>
+
+<label>Select Mode:</label>
+<select id="mode">
+    <option value="student">Student Mode</option>
+    <option value="admin">School Admin Mode</option>
+</select>
+
+
+
+    <div id="chatBox" class="chat-box">
+        <p><strong>Assistant:</strong> Welcome! Click Start to begin.</p>
+    </div>
+
+    <button onclick="startProcess()">Start Application</button>
+    <button onclick="startVoice()">🎤 Speak</button>
+    <button onclick="saveApplication()">💾 Save Application</button>
+    <button onclick="syncData()">🔄 Sync Data</button>
+
+    <h3>Saved Applications:</h3>
+    <ul id="savedList"></ul>
+    <h3>Admin Dashboard</h3>
+<p>Total Applications: <span id="totalCount">0</span></p>
+<p>Submitted: <span id="submittedCount">0</span></p>
+<p>Pending Sync: <span id="pendingCount">0</span></p>
+
+<button onclick="clearAll()">🗑 Clear All Applications</button>
+<div class="container">
+
+    <!-- Your other content above -->
+
+    <hr>
+
+</div>
+<div id="eligibilitySection" style="display: none;" class="eligibility-section">
+    <h3>🎉 You are Eligible for Scholarship!</h3>
+    <p>Please proceed to upload required documents.</p>
+
+    <button onclick="window.location.href='upload.html'">
+        Proceed to Upload Documents
+    </button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
